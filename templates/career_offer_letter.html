@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f6f9fc;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .header {
+        background-color: #004d40;
+        color: #ffffff;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .header img {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      .body {
+        padding: 30px;
+        color: #333333;
+      }
+
+      .body h3 {
+        color: #004d40;
+        margin-top: 0;
+      }
+
+      .details {
+        background-color: #e0f2f1;
+        border-left: 5px solid #00796b;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      .details p {
+        margin: 8px 0;
+        font-size: 15px;
+      }
+
+      .footer {
+        background-color: #f0f0f0;
+        padding: 20px;
+        font-size: 13px;
+        text-align: center;
+        color: #666;
+      }
+
+      .footer a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #00796b;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="{{ logo_url }}" alt="GroupIN Logo" />
+        <h2>GroupIN Solutions India Pvt Ltd</h2>
+      </div>
+
+      <div class="body">
+        <h3>Dear {{ customer_name }},</h3>
+
+        <p>
+          Congratulations! 🎉 We are thrilled to inform you that you have been
+          selected for the role of <strong>{{ job_role }}</strong> at GroupIN
+          Solutions India Pvt Ltd.
+        </p>
+
+        <p>
+          We appreciate the time and effort you invested throughout the
+          interview process. We are excited to welcome a talent like you to our
+          growing team!
+        </p>
+
+        <div class="details">
+          <p><strong>Joining Date:</strong> {{ joining_date }}</p>
+          <p><strong>Job Location:</strong> {{ job_location }}</p>
+          <p><strong>Reporting To:</strong> {{ reporting_manager }}</p>
+          <p>
+            <strong>Offer Letter:</strong>
+            <a href="{{ offer_letter_url }}">Download PDF</a>
+          </p>
+        </div>
+
+        <p>
+          If you have any questions or need help before your joining date, feel
+          free to reach out to our HR team at
+          <strong>{{ contact_email }}</strong>.
+        </p>
+
+        <a href="{{ offer_letter_url }}" class="cta-button"
+          >View Offer Letter</a
+        >
+
+        <p>Welcome to the GroupIN family! 💼</p>
+      </div>
+
+      <div class="footer">
+        <p>GroupIN Solutions, 2nd Floor, ABC Complex, Delhi - 110001</p>
+        <p>
+          We hope you enjoy emails from GroupIN. If you wish to unsubscribe,
+          <a href="{{ unsubscribe_link }}">click here</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

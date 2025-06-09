@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f6f9fc;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .header {
+        background-color: #004d40;
+        color: #ffffff;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .header img {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      .body {
+        padding: 30px;
+        color: #333333;
+        line-height: 1.5;
+        text-align: center;
+      }
+
+      .body h3 {
+        color: #004d40;
+        margin-top: 0;
+      }
+
+      .signature {
+        margin-top: 40px;
+        font-style: normal;
+        color: #004d40;
+        font-weight: bold;
+      }
+
+      .position {
+        font-weight: normal;
+        font-size: 14px;
+        color: #666666;
+        margin-top: 4px;
+        font-style: italic;
+      }
+
+      .footer {
+        background-color: #f0f0f0;
+        padding: 20px;
+        font-size: 13px;
+        text-align: center;
+        color: #666666;
+      }
+
+      .footer a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="{{ logo_url }}" alt="GroupIN Logo" />
+        <h2>GroupIN Solutions India Pvt Ltd</h2>
+      </div>
+
+      <div class="body">
+        <h3>Dear {{ customer_name }},</h3>
+
+        <p>Thank you for registering with GroupIN Solutions India Pvt Ltd.</p>
+
+        <p>
+          We are excited to welcome you to our community! Your journey with us
+          begins now, and we look forward to providing you with the best service
+          and support.
+        </p>
+
+        <div class="signature">
+          {{ ceo_name }}
+          <div class="position">{{ ceo_position }}</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>GroupIN Solutions, 2nd Floor, ABC Complex, Delhi - 110001</p>
+        <p>
+          If you wish to unsubscribe,
+          <a href="{{ unsubscribe_link }}">click here</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

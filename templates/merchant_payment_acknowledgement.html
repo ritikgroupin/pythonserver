@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9fafb;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+        overflow: hidden;
+      }
+      .header {
+        background-color: #388e3c;
+        color: white;
+        padding: 25px 20px;
+        text-align: center;
+      }
+      .header h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+      .body {
+        padding: 30px 25px;
+        color: #333;
+        line-height: 1.6;
+      }
+      .details-box {
+        background-color: #e8f5e9;
+        border-left: 5px solid #2e7d32;
+        padding: 18px 22px;
+        border-radius: 8px;
+        margin: 20px 0;
+        font-size: 15px;
+      }
+      .details-box p {
+        margin: 8px 0;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: #2e7d32;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .footer {
+        background-color: #f0f0f0;
+        color: #666;
+        font-size: 13px;
+        text-align: center;
+        padding: 18px 20px;
+      }
+      .footer a {
+        color: #2e7d32;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Payment Successful: Payout Made</h2>
+      </div>
+      <div class="body">
+        <p>Dear {{ merchant_name }},</p>
+        <p>
+          We’re pleased to inform you that a payment has been successfully
+          transferred to your bank account. Below are the payout details:
+        </p>
+
+        <div class="details-box">
+          <p><strong>Transaction ID:</strong> {{ transaction_id }}</p>
+          <p><strong>Amount Paid:</strong> ₹{{ amount }}</p>
+          <p><strong>Date & Time:</strong> {{ payment_time }}</p>
+          <p><strong>Bank Name:</strong> {{ bank_name }}</p>
+          <p><strong>Account Number:</strong> {{ account_number }}</p>
+          <p><strong>Reference Number:</strong> {{ reference_number }}</p>
+        </div>
+
+        <a href="{{ payout_details_url }}" class="cta-button"
+          >View Payout Details</a
+        >
+
+        <p>Thank you for your continued partnership!</p>
+      </div>
+      <div class="footer">
+        <p>GroupIN Solutions India Pvt Ltd</p>
+        <p><a href="{{ support_link }}">Contact Support</a></p>
+      </div>
+    </div>
+  </body>
+</html>

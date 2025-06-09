@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f6f9fc;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .header {
+        background-color: #004d40;
+        color: #ffffff;
+        text-align: center;
+        padding: 24px 20px;
+      }
+
+      .header img {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      .body {
+        padding: 30px;
+        color: #333333;
+        line-height: 1.6;
+      }
+
+      .summary-box {
+        background-color: #e0f2f1;
+        padding: 16px 20px;
+        border-left: 5px solid #00796b;
+        border-radius: 8px;
+        margin: 20px 0;
+        font-size: 15px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #00796b;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .footer {
+        background-color: #f0f0f0;
+        padding: 20px;
+        font-size: 13px;
+        text-align: center;
+        color: #666;
+      }
+
+      .footer a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="{{ logo_url }}" alt="GroupIN Logo" />
+        <h2>GroupIN Solutions India Pvt Ltd</h2>
+      </div>
+
+      <div class="body">
+        <h3>Hello {{ customer_name }},</h3>
+
+        <p>Thank you for shopping with us! Here's your order summary:</p>
+
+        <div class="summary-box">
+          <p><strong>Order ID:</strong> {{ order_id }}</p>
+          <p><strong>Product:</strong> {{ product_name }}</p>
+          <p><strong>Quantity:</strong> {{ quantity }}</p>
+          <p><strong>Total Amount:</strong> ₹{{ order_value }}</p>
+          <p><strong>Payment Status:</strong> {{ payment_status }}</p>
+          <p>
+            <strong>Delivery Address:</strong><br />
+            {{ full_name }}<br />
+            {{ street_address }}, {{ city }}<br />
+            {{ state_province }} - {{ postal_code }}<br />
+            {{ country }}<br />
+            Phone: {{ phone_number }}
+          </p>
+        </div>
+
+        <a href="{{ order_view_url }}" class="cta-button">View My Order</a>
+
+        <p>
+          If you have any questions, feel free to contact us at
+          <strong>support@groupin.app</strong>.
+        </p>
+      </div>
+
+      <div class="footer">
+        <p>GroupIN Solutions, 2nd Floor, ABC Complex, Delhi - 110001</p>
+        <p>
+          If you wish to unsubscribe,
+          <a href="{{ unsubscribe_link }}">click here</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

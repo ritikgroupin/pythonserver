@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f9fc;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .header {
+        background-color: #283593;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .header h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+      .body {
+        padding: 25px;
+        line-height: 1.5;
+      }
+      .lead-section {
+        background-color: #e8eaf6;
+        border-left: 5px solid #3f51b5;
+        padding: 15px 20px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+      }
+      .lead-section p {
+        margin: 6px 0;
+        font-size: 15px;
+      }
+      .comments {
+        background: #f1f3f9;
+        border-radius: 6px;
+        padding: 10px 15px;
+        margin-top: 10px;
+        font-size: 14px;
+        color: #555;
+      }
+      .footer {
+        background-color: #f0f0f0;
+        text-align: center;
+        font-size: 13px;
+        padding: 18px 20px;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>New Lead Received</h2>
+      </div>
+      <div class="body">
+        <p>Hello {{ owner_name }},</p>
+        <p>You have received a new lead. Here are the details:</p>
+
+        <div class="lead-section">
+          <p><strong>Lead ID:</strong> {{ lead_id }}</p>
+          <p><strong>Name:</strong> {{ customer_name }}</p>
+          <p><strong>Email:</strong> {{ customer_email }}</p>
+          <p><strong>Phone:</strong> {{ customer_phone }}</p>
+          <p><strong>Service Requested:</strong> {{ service_requested_for }}</p>
+          <p><strong>Status:</strong> {{ status }}</p>
+
+          <div class="comments">
+            <strong>Comments:</strong><br />
+            {% for comment in comments %}
+            <p>
+              • {{ comment.status }} - "{{ comment.comment_text }}" (Next
+              contact: {{ comment.next_contact_date }})
+            </p>
+            {% endfor %}
+          </div>
+        </div>
+
+        <p>Please follow up with the lead at your earliest convenience.</p>
+        <p>Best regards,<br />GroupIN Solutions Team</p>
+      </div>
+      <div class="footer">
+        <p>GroupIN Solutions India Pvt Ltd</p>
+        <p><a href="{{ support_link }}">Contact Support</a></p>
+      </div>
+    </div>
+  </body>
+</html>

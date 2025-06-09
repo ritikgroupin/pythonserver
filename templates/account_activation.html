@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fb;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .header {
+        background-color: #005fa3;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .header img {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .header h2 {
+        margin: 0;
+      }
+
+      .body {
+        padding: 30px;
+        text-align: center;
+      }
+
+      .body h3 {
+        margin-top: 0;
+        color: #444;
+      }
+
+      .gif {
+        margin: 20px 0;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .credentials {
+        background-color: #f1f1f1;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: left;
+        margin: 20px auto;
+        display: inline-block;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .credentials span {
+        font-weight: bold;
+      }
+
+      .footer {
+        background-color: #f0f0f0;
+        padding: 20px;
+        font-size: 13px;
+        text-align: center;
+        color: #666;
+      }
+
+      .footer a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="{{ logo_url }}" alt="Company Logo" />
+        <h2>GroupIN Solutions India Pvt Ltd</h2>
+      </div>
+
+      <div class="body">
+        <h3>🎉 Congratulations, {{ customer_name }}!</h3>
+        <div class="gif">
+          <img src="{{ gif_url }}" alt="Congratulations" width="100%" />
+        </div>
+
+        <p>Your account has been verified by the GroupIN backend team.</p>
+        <p>You can now log in using the following credentials:</p>
+
+        <div class="credentials">
+          <p><span>Login ID:</span> {{ login_id }}</p>
+          <p><span>Password:</span> {{ password }}</p>
+        </div>
+
+        <p>Need any help with your account? We are here for you:</p>
+        <p><strong>Phone:</strong> {{ support_phone }}</p>
+      </div>
+
+      <div class="footer">
+        <p>GroupIN Solutions, 2nd Floor, ABC Complex, Delhi - 110001</p>
+        <p>
+          We hope you enjoy emails from GroupIN. If you wish to unsubscribe,
+          <a href="{{ unsubscribe_link }}">click here</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

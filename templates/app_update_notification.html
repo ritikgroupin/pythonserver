@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f6f9fc;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .header {
+        background-color: #004d40;
+        color: #ffffff;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .header img {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      .body {
+        padding: 30px;
+        color: #333333;
+        line-height: 1.5;
+      }
+
+      .body h3 {
+        color: #004d40;
+        margin-top: 0;
+      }
+
+      .update-details {
+        background-color: #e0f2f1;
+        border-left: 5px solid #00796b;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        font-size: 15px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #00796b;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .footer {
+        background-color: #f0f0f0;
+        padding: 20px;
+        font-size: 13px;
+        text-align: center;
+        color: #666666;
+      }
+
+      .footer a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="{{ logo_url }}" alt="GroupIN Logo" />
+        <h2>GroupIN Solutions India Pvt Ltd</h2>
+      </div>
+
+      <div class="body">
+        <h3>Hello {{ customer_name }},</h3>
+
+        <p>We’re excited to announce a new update to the GroupIN app!</p>
+
+        <div class="update-details">
+          <p><strong>Update Version:</strong> {{ app_version }}</p>
+          <p><strong>Release Date:</strong> {{ release_date }}</p>
+          <p><strong>What’s New:</strong></p>
+          <ul>
+            {{ update_features_list }}
+          </ul>
+        </div>
+
+        <p>
+          To enjoy the latest features and improvements, please update your app
+          from the store.
+        </p>
+
+        <a href="{{ update_link }}" class="cta-button">Update Now</a>
+
+        <p>Thank you for being a valued member of the GroupIN community!</p>
+      </div>
+
+      <div class="footer">
+        <p>GroupIN Solutions, 2nd Floor, ABC Complex, Delhi - 110001</p>
+        <p>
+          If you wish to unsubscribe,
+          <a href="{{ unsubscribe_link }}">click here</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

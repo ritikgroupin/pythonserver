@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f7;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .header {
+        background-color: #005fa3;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .header img {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      .body {
+        padding: 30px;
+      }
+
+      .body h3 {
+        color: #333;
+        margin-top: 0;
+      }
+
+      .job-details {
+        background-color: #f1f1f1;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 20px 0;
+        line-height: 1.6;
+      }
+
+      .footer {
+        background-color: #f0f0f0;
+        padding: 20px;
+        font-size: 13px;
+        text-align: center;
+        color: #666;
+      }
+
+      .footer a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="{{ logo_url }}" alt="GroupIN Logo" />
+        <h2>GroupIN Solutions India Pvt Ltd</h2>
+      </div>
+
+      <div class="body">
+        <h3>Dear {{ customer_name }},</h3>
+
+        <p>
+          Thank you for applying for the position of
+          <strong>{{ job_role }}</strong>. Your application has been
+          <strong>successfully received</strong> and is currently under review.
+          Our team will contact you shortly if your profile matches our
+          requirements.
+        </p>
+
+        <div class="job-details">
+          <h4>📌 Job Role & Responsibilities:</h4>
+          <p>{{ job_description }}</p>
+        </div>
+
+        <p>Thanks & Regards,</p>
+        <p>
+          <strong>HR Team</strong><br />
+          <a href="mailto:hr@groupin.app">hr@groupin.app</a>
+        </p>
+      </div>
+
+      <div class="footer">
+        <p>GroupIN Solutions, 2nd Floor, ABC Complex, Delhi - 110001</p>
+        <p>
+          We hope you enjoy emails from GroupIN. If you wish to unsubscribe,
+          <a href="{{ unsubscribe_link }}">click here</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

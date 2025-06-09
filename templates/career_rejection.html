@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .header {
+        background-color: #c62828;
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .header img {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      .body {
+        padding: 30px;
+      }
+
+      .body h3 {
+        color: #c62828;
+        margin-top: 0;
+      }
+
+      .footer {
+        background-color: #f0f0f0;
+        padding: 20px;
+        font-size: 13px;
+        text-align: center;
+        color: #666;
+      }
+
+      .footer a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="{{ logo_url }}" alt="GroupIN Logo" />
+        <h2>GroupIN Solutions India Pvt Ltd</h2>
+      </div>
+
+      <div class="body">
+        <h3>Dear {{ customer_name }},</h3>
+
+        <p>
+          Thank you sincerely for taking the time to apply and meet with our
+          team. It was truly a pleasure getting to know more about your journey,
+          achievements, and aspirations.
+        </p>
+
+        <p>
+          After careful consideration, we regret to inform you that we will not
+          be moving forward with your application at this time.
+        </p>
+
+        <p>
+          This decision was not easy, and does not diminish the value of your
+          experience or potential. We were impressed by your background, and we
+          encourage you to apply again in the future for roles that match your
+          expertise and goals.
+        </p>
+
+        <p>
+          We truly wish you continued success in your career path and hope our
+          paths may cross again.
+        </p>
+
+        <p>
+          Warm regards,<br />
+          <strong>GroupIN Solutions India Pvt Ltd</strong>
+        </p>
+      </div>
+
+      <div class="footer">
+        <p>GroupIN Solutions, 2nd Floor, ABC Complex, Delhi - 110001</p>
+        <p>
+          We hope you stay connected with GroupIN. If you wish to unsubscribe
+          from future emails, <a href="{{ unsubscribe_link }}">click here</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

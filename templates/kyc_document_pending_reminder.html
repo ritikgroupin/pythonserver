@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f6f9fc;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .header {
+        background-color: #004d40;
+        color: #ffffff;
+        text-align: center;
+        padding: 30px 20px;
+      }
+
+      .header img {
+        height: 50px;
+        margin-bottom: 10px;
+      }
+
+      .header h2 {
+        margin: 0;
+        font-size: 22px;
+      }
+
+      .body {
+        padding: 30px;
+        color: #333333;
+        line-height: 1.5;
+      }
+
+      .body h3 {
+        color: #004d40;
+        margin-top: 0;
+      }
+
+      .details {
+        background-color: #e0f2f1;
+        border-left: 5px solid #00796b;
+        padding: 15px 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+        font-size: 15px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #00796b;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .footer {
+        background-color: #f0f0f0;
+        padding: 20px;
+        font-size: 13px;
+        text-align: center;
+        color: #666666;
+      }
+
+      .footer a {
+        color: #0077cc;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="{{ logo_url }}" alt="GroupIN Logo" />
+        <h2>GroupIN Solutions India Pvt Ltd</h2>
+      </div>
+
+      <div class="body">
+        <h3>Dear {{ customer_name }},</h3>
+
+        <p>
+          Our records indicate that the following document(s) for your KYC
+          verification are still pending submission:
+        </p>
+
+        <div class="details">
+          <p><strong>Pending Document:</strong> {{ pending_document_name }}</p>
+          <p><strong>Last Date to Submit:</strong> {{ submission_deadline }}</p>
+        </div>
+
+        <p>
+          Please submit the required document(s) by clicking the button below to
+          avoid any disruption to your account or services.
+        </p>
+
+        <a href="{{ submission_link }}" class="cta-button">Submit Document</a>
+
+        <p style="margin-top: 20px">
+          <strong>Important:</strong> Failure to submit the required documents
+          by the deadline may result in account suspension or restricted access
+          to services until the KYC process is complete.
+        </p>
+
+        <p>
+          If you have already submitted the documents, please disregard this
+          message. For any questions, contact us at
+          <strong>{{ contact_email }}</strong>.
+        </p>
+      </div>
+
+      <div class="footer">
+        <p>GroupIN Solutions, 2nd Floor, ABC Complex, Delhi - 110001</p>
+        <p>
+          If you wish to unsubscribe,
+          <a href="{{ unsubscribe_link }}">click here</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
